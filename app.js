@@ -54,13 +54,13 @@ document.getElementById('duration')
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
-  element.classList.add('added');
+  element.classList.toggle('added');      /* application of toggle */
   
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
   } else {
-    element.classList.remove('added');
+    //element.classList.remove('added');
     alert('r u sure !')
     item > -1 ? sliders.splice(item, 1) : false
 
